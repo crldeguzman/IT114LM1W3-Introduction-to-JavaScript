@@ -14,24 +14,53 @@ let numbers = [
 
 // Todo 3.1 Get the first, 5th, and last items in the numbers array.
 // Your code here
+console.log(`First item: ${numbers[0]}. Fifth item: ${numbers[4]}. Last item: ${numbers[14]}`)
 
 // Todo 3.2 calculate the min, max, and the average of the numbers array
 // Your code here
+const minnum = Math.min(...numbers);
+
+const maxnum = Math.max(...numbers); 
+
+let sum = 0;
+numbers.forEach((number) => {
+  sum += number;
+});
+let avg = sum / numbers.length;
+
+console.log(`Minimum number: ${minnum}. Maximum number: ${maxnum}. Average: ${avg}`)
 
 // Checkpoint 3.1 How would you compare lists in python vs arrays in JavaScript
-// Answer: 
+// Answer: Lists in python can contain data of different types, meanwhile arrays in JavaScript are strictly
+// for a single data type only. Python lists are dynamic, while JS arrays are static.
 
 // Todo 3.3 Declare an object with information about IT114L (course code, name, units, number of students)
 // Your code here
+let labCourse = new Object();
+labCourse = {
+    code: "IT114L",
+    name: "Web Systems and Technologies (Laboratory)",
+    units: 1,
+    students: 40
+};
 
 // Todo 3.4 Add professor name as one of the fields of the object. Display the value of professor name.
 // Your code here
+labCourse.professor = "Sir Job Lipat"
+console.log(labCourse.professor)
 
-// Todo 3.5 Declare and array of objects with information about the courses you are taking this term
+// Todo 3.5 Declare an array of objects with information about the courses you are taking this term
 // Your code here
+let courses = [
+    {courseCode: "IT114", name: "Web Systems and Technologies", units: 2},
+    {courseCode: "IT114L", name: "Web Systems and Technologies (Laboratory)", units: 1},
+    {courseCode: "CS107", name: "Information Management", units: 2}
+];
+
 
 // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
 // Your code here
+
 
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
 // Answer: 
