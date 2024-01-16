@@ -82,7 +82,7 @@ console.log('PI:', mathUtils.PI);
 // Your code here
 const isPalindrome = require('./isPalindrome');
 
-const word = 'level';
+const word = 'rotator';
 const result = isPalindrome(word);
 
 console.log(`Is "${word}" a palindrome? ${result}`);
