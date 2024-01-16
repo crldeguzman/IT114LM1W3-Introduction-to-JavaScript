@@ -38,7 +38,7 @@ console.log(`Minimum number: ${minnum}. Maximum number: ${maxnum}. Average: ${av
 // Your code here
 let labCourse = new Object();
 labCourse = {
-    code: "IT114L",
+    courseCode: "IT114L",
     name: "Web Systems and Technologies (Laboratory)",
     units: 1,
     students: 40
@@ -60,13 +60,27 @@ let courses = [
 
 // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
 // Your code here
+let totalUnits = 0;
+
+for (let course of courses) {
+    totalUnits += course.units;
+}
+
+console.log(totalUnits);
 
 
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
-// Answer: 
+// Answer: In Python, dictionaries serve as the equivalent of JavaScript objects. 
+// Both dictionaries and JavaScript objects are key-value pairs, allowing for the storage and retrieval of data in a flexible and dynamic manner.
+// JavaScript objects allow dynamic addition and removal of properties, enabling a more flexible structure, while Python dictionaries are typically more explicit and require defined keys.
+// Additionally, JavaScript objects support prototypal inheritance, whereas Python dictionaries lack this feature as they are not designed for the same level of object-oriented programming paradigm.
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
+let numbersCopy = [...numbers, 42069];
 
 // Todo 3.7 Going back to your IT114L object, extract the course code and units using the spread operator
 // Your code here
+let { courseCode, units } = labCourse;
+console.log("Course Code:", courseCode);
+console.log("Units:", units);
